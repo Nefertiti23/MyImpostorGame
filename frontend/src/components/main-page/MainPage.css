@@ -1,0 +1,31 @@
+form .in-form-box label {
+    font-weight: 500;
+}
+
+form .in-form-box input[type=text] {
+    border: 1px solid white;
+    margin-left: 20px;
+    padding: 2px 8px;
+    border-radius: 50px;
+    height: max-content;
+}
+
+form .in-form-box select {
+    border: 1px solid white;
+    padding: 4px 8px;
+    border-radius: 50px;
+    width: min-content;
+}
+
+form .in-form-box#total-members {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 10px;
+}
+
+form .in-form-box#members-names {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
