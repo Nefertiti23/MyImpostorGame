@@ -21,7 +21,7 @@ function App() {
   const [theWord, setWord] = useState('null');
   
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/MyImpostorGame">
       <Heading />
       <div className="border rounded-lg py-4 w-100 md:w-180 my-4 h-[70vh] box-border overflow-scroll">
         <Routing
