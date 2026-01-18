@@ -3,7 +3,8 @@ import MainPage from './main-page/MainPage';
 import GamePage from './game-page/GamePage';
 
 export default function Routing (
-    { totalPlayers, setTotalPlayers, totalImpostors, setTotalImpostors, playerNames, setPlayerNames, impostorIDX, setImpostorIDX, wordSet, theWord, setWord }
+    { totalPlayers, setTotalPlayers, totalImpostors, setTotalImpostors, 
+    playerNames, setPlayerNames, impostorIDX, setImpostorIDX, wordSet, theWord, setWord }
 ) {
     return (
         <Routes>
@@ -19,7 +20,13 @@ export default function Routing (
                 wordSet={wordSet}
                 setWord={setWord} />
             } />
-            <Route path='/theGame' element={<GamePage players={playerNames} impostorIdx={impostorIDX} theWord={theWord} totalImpostors={totalImpostors} />} />
+            <Route path='/theGame' element={
+                <GamePage 
+                players={playerNames} 
+                impostorIdx={impostorIDX} 
+                theWord={theWord} 
+                totalImpostors={totalImpostors} />
+            } />
         </Routes>
     )
 }

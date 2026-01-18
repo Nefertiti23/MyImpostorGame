@@ -17,8 +17,8 @@ export default function GamePage ({ players, impostorIdx, theWord, totalImpostor
         return (
             <>
                 <div className="flex flex-col">
-                    <div className="font-semibold text-lg">Player {idx+1}</div>
-                    <p className="text-sm text-stone-400 px-20">
+                    <div className="font-semibold text-lg text-left">Player {idx+1}</div>
+                    <p className="text-sm text-stone-400 text-left">
                         Take a peek at your word. Don't forget to hide it before the next player sees it.
                     </p>
                 </div>
@@ -31,8 +31,8 @@ export default function GamePage ({ players, impostorIdx, theWord, totalImpostor
         <div className="players-box">
             {showPlayerCard()}
             <div className="flex flex-row gap-10 mt-8">
-                <button onClick={() => prevPlayer()}>Previous player</button>
-                <button onClick={() => nextPlayer()}>Next player</button>
+                <button id="secondary" onClick={() => prevPlayer()}>Previous player</button>
+                <button id="secondary" onClick={() => nextPlayer()}>Next player</button>
             </div>
         </div>
     )

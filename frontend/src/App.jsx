@@ -6,7 +6,7 @@ import { words } from './data/words';
 
 function Heading () {
     return (
-        <div>
+        <div className='box-border mt-14'>
             <h1>Impostor 2</h1>
             <p className="py-2">The Impostor game, but with massive improvements.</p>
         </div>
@@ -23,7 +23,8 @@ function App() {
   return (
     <BrowserRouter basename="/MyImpostorGame">
       <Heading />
-      <div className="border rounded-lg py-4 w-100 md:w-180 my-4 h-[70vh] box-border overflow-scroll">
+      <div className="p-4 w-full md:w-max my-5 box-border
+      border-2 border-dashed border-stone-600 rounded-lg">
         <Routing
         totalPlayers={totalPlayers}
         setTotalPlayers={setTotalPlayers}

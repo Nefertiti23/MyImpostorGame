@@ -67,7 +67,7 @@ export default function PlayersForm (
 
     return (
         <form onSubmit={(e) => { e.preventDefault(); }}
-        className="w-full md:w-2/3 mx-auto my-4 p-4 flex flex-col gap-6">
+        className="w-full mt-6 flex flex-col gap-6 box-border">
 
             <div className="in-form-box" id="total-members">
                 <label>Choose number of players:</label>
@@ -100,18 +100,18 @@ export default function PlayersForm (
                     return (
                         <div key={i} className="flex flex-row justify-between">
                             <label>Name of player {i+1}</label>
-                            <input type="text" placeholder="Name" className="w-50 md:w-70"
+                            <input type="text" placeholder="Name" className="w-3/5 md:w-70"
                             onChange={(e) => handleNameChange(i, e.target.value)} />
                         </div>
                     )
                 })}
             </div>
             
-            <button onClick={() => {
+            <button id='primary' onClick={() => {
                 console.log(playerNames);
                 setImpostorIndexes();
                 checkNames() ? navigate('/theGame') : null;
-            }}>Next</button>
+            }} className='start-btn'>Start</button>
             <p className="text-sm text-red-400">{err}</p>
         </form>
     )

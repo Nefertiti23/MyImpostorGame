@@ -3,7 +3,7 @@ form .in-form-box label {
 }
 
 form .in-form-box input[type=text] {
-    border: 1px solid white;
+    border: 1px solid #339989;
     margin-left: 20px;
     padding: 2px 8px;
     border-radius: 50px;
@@ -11,7 +11,7 @@ form .in-form-box input[type=text] {
 }
 
 form .in-form-box select {
-    border: 1px solid white;
+    border: 1px solid #339989;
     padding: 4px 8px;
     border-radius: 50px;
     width: min-content;

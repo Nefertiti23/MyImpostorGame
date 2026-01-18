@@ -12,7 +12,7 @@ export default function PlayerCard ({ name, impostorBool, theWord }) {
         <div className="player-card">
             <div className="name">{name}</div>
             <div className="word" style={{visibility: wordDisplay}}>{impostorBool ? 'Impostor' : theWord}</div>
-            <button onClick={
+            <button id="primary" onClick={
                 changeWordDisplay
             }>{wordDisplay === 'hidden' ? 'Show' : 'Hide'}</button>
         </div>
