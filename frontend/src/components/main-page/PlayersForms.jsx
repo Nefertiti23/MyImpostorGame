@@ -45,9 +45,9 @@ export default function PlayersForm (
     }
 
     // code taken from https://dev.to/niero/generating-unique-random-numbers-in-javascript-using-sets-2dcd
-    const setUniqueImpostors = () => {
+    const setUniqueImpostors = (impostorCount) => {
         const uniqueNumbers = new Set();
-        while (uniqueNumbers.size < totalImpostors) {
+        while (uniqueNumbers.size < impostorCount) {
             const randomNumber = Math.floor(Math.random() * totalPlayers);
             uniqueNumbers.add(randomNumber);
         }
@@ -56,12 +56,12 @@ export default function PlayersForm (
 
     const setImpostorIndexes = () => {
         const numImpostors = totalImpostors === "Random" 
-            ? Math.floor(Math.random() * (totalPlayers - 1)) + 1 
+            ? Math.floor(Math.random() * (totalPlayers)) + 1 
             : Number(totalImpostors);
         setTotalImpostors(numImpostors);
-        const impostors = [...setUniqueImpostors()];
+        const impostors = [...setUniqueImpostors(numImpostors)];
         console.log("Total impostors:", numImpostors);
-        console.log("Impostors:", impostors);
+        console.log("Impostors:", impostors.map(idx => playerNames[idx]));
         setImpostorIDX(impostors);
     }
 
